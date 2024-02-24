@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/cabecalho"
+        layout="@layout/cabecalho"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_padrao"
+        app:cardCornerRadius="@dimen/radius_padrao"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gradiente_ganho"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padrao"
+                android:layout_marginLeft="@dimen/margin_padrao"
+                android:layout_marginRight="@dimen/margin_padrao"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ganhos"
+                    android:layout_marginBottom="@dimen/margin_menor"
+                    android:textColor="@color/emPrincipal" />
+
+                <TextView
+                    android:id="@+id/tvResultadoGanho"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valor_padrao"
+                    android:textColor="@color/emPrincipal" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvItensGanhos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvNenhumItemAdicionadoGanho"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nenhum_item_adicionado"
+                android:layout_marginTop="@dimen/margin_padrao"
+                android:layout_marginLeft="@dimen/margin_padrao"
+                android:layout_marginRight="@dimen/margin_padrao"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_padrao"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_padrao"
+        app:cardCornerRadius="@dimen/radius_padrao"
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/gradiente_perda">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_padrao"
+                android:layout_marginLeft="@dimen/margin_padrao"
+                android:layout_marginRight="@dimen/margin_padrao"
+
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/gastos"
+                    android:layout_marginBottom="@dimen/margin_menor"
+                    android:textColor="@color/emPrincipal" />
+
+                <TextView
+                    android:id="@+id/tvResultadoPerda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/valor_padrao"
+                    android:textColor="@color/emPrincipal" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvItensPerda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/tvNenhumItemAdicionadoPerda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/nenhum_item_adicionado"
+                android:layout_marginTop="@dimen/margin_padrao"
+                android:layout_marginLeft="@dimen/margin_padrao"
+                android:layout_marginRight="@dimen/margin_padrao"
+                />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_padrao"/>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

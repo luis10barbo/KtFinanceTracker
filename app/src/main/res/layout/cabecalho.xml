@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/margin_padrao">
+
+    <TextView
+        android:id="@+id/tvTituloCabecalho"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="@string/titulo"
+        android:textColor="@color/emPrincipal"
+        android:textSize="16sp"
+
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvResultadoCabecalho"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/valor_padrao"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <Button
+        android:id="@+id/btnAdd"
+        android:visibility="gone"
+        android:layout_marginStart="@dimen/margin_padrao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/adicionar"
+        android:backgroundTint="@color/principal"/>
+</LinearLayout>
