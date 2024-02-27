@@ -1,11 +1,12 @@
 package com.example.financetracker.utils
 
 import com.example.financetracker.model.ItemFinanca
+import com.example.financetracker.model.TipoFinanca
 
-fun gerarItens(): ArrayList<ItemFinanca> {
+fun gerarItens(tipo: TipoFinanca): ArrayList<ItemFinanca> {
     val itens = ArrayList<ItemFinanca>()
     for (x in 1..(Math.random()*10).toInt()) {
-        itens.add(ItemFinanca("Item " + x, Math.random()*300, "#FAFAFA"))
+        itens.add(ItemFinanca(null, null,"Item " + x, Math.random()*300, "#FAFAFA", tipo))
     }
     return itens
 }

@@ -3,7 +3,7 @@ package com.example.financetracker.model
 import com.example.financetracker.utils.formatarValorReal
 import java.io.Serializable
 
-data class Data(val ano: Int, val mes: Int, val itensGanhos: ArrayList<ItemFinanca>, val itensPerdas: ArrayList<ItemFinanca>): Serializable {
+data class Data(var id: Long?, val ano: Int, val mes: Int, val itensGanhos: ArrayList<ItemFinanca>, val itensPerdas: ArrayList<ItemFinanca>): Serializable {
     var total = 0.0
     private set
 

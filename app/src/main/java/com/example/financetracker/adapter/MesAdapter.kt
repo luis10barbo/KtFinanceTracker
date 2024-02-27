@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import com.example.financetracker.R
 import com.example.financetracker.activities.AtividadeMes
 import com.example.financetracker.constants.Extras
 import com.example.financetracker.databinding.ListaMesesBinding

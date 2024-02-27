@@ -7,6 +7,8 @@ import androidx.activity.ComponentActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.financetracker.adapter.ItemFinancaAdapter
 import com.example.financetracker.constants.Extras
+import com.example.financetracker.database.Database
+import com.example.financetracker.database.DateTable
 import com.example.financetracker.databinding.PaginaMesBinding
 import com.example.financetracker.extensions.extFormatarReal
 import com.example.financetracker.extensions.extGetSerializableExtra
@@ -26,7 +28,6 @@ class AtividadeMes: ComponentActivity() {
         binding.cabecalho.tvTituloCabecalho.text = String.format("%d, %s", data.ano, adquirirNomeMes(this, data.mes))
         binding.cabecalho.btnAdd.visibility = View.VISIBLE
 
-
         val total = data.ganho + data.perda
         binding.cabecalho.tvResultadoCabecalho.text = total.extFormatarReal()
         binding.cabecalho.tvResultadoCabecalho.setTextColor(getColor(corValorFinanceiro(total)))
@@ -43,6 +44,10 @@ class AtividadeMes: ComponentActivity() {
         binding.rvItensPerda.adapter = ItemFinancaAdapter(this, data.itensPerdas)
         binding.rvItensPerda.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
 
+        val dateTable = DateTable(Database(this))
+        binding.cabecalho.btnAdd.setOnClickListener {
+            dateTable.save(data)
+        }
     }
 
 

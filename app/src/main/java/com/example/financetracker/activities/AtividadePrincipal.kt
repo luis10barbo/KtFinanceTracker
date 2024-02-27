@@ -1,14 +1,11 @@
 package com.example.financetracker.activities
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.View
-import android.widget.AdapterView
 import androidx.activity.ComponentActivity
 import com.example.financetracker.adapter.MesAdapter
-import com.example.financetracker.constants.Extras
 import com.example.financetracker.databinding.PrincipalBinding
 import com.example.financetracker.model.Data
+import com.example.financetracker.model.TipoFinanca
 import com.example.financetracker.utils.corValorFinanceiro
 import com.example.financetracker.utils.formatarValorReal
 import com.example.financetracker.utils.gerarItens
@@ -28,18 +25,18 @@ class AtividadePrincipal : ComponentActivity() {
 
     private fun addExemploMeses() {
         for (mes in 1..12) {
-            val itensGanhos = gerarItens()
+            val itensGanhos = gerarItens(TipoFinanca.GANHO)
             var valorGanho = 0.0;
             for (item in itensGanhos) {
                 valorGanho += item.valor
             }
-            val itensPerdas = gerarItens()
+            val itensPerdas = gerarItens(TipoFinanca.PERDA)
             var valorPerda = 0.0;
             for (item in itensPerdas) {
                 valorPerda += item.valor
             }
 
-            meses.add(Data(2024, mes,itensGanhos, itensPerdas))
+            meses.add(Data(null,2024, mes,itensGanhos, itensPerdas))
         }
     }
 
