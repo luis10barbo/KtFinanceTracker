@@ -3,4 +3,5 @@
     <dimen name="margin_padrao">12dp</dimen>
     <dimen name="radius_padrao">5dp</dimen>
     <dimen name="margin_menor">6dp</dimen>
+    <dimen name="margin_grande">24dp</dimen>
 </resources>
